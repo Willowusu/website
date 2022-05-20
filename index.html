@@ -1,54 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- CSS only -->
-    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <link rel="manifest" href="favicon/site.webmanifest">
-    <link rel="stylesheet" href="style.css">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-<!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-    <title>William Owusu - Willow</title>
-</head>
-<body>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <div class="container">
-        <div class="px-4  my-5 text-center ">
-            <img class="d-block mx-auto mb-3 mt-2" src="willow.png" alt=""  style="width: 100px; height: 129px">
-            <div class="flag mb-3"></div>
-            <p class="lead mb-1">I am <span style="font-size: 40px; font-weight: lighter; color: red">Willow</span></p>
-            <div class="col-lg-6 mx-auto">
-              <p class="lead mb-1">I am a software engineer who specializes in building and occassionally designing  exceptional digital experiences. Currently, I'm an engineer at<a href="https://junipayments.com/" target="_blank"> <span style="font-weight: bold; color: red;"> Juni Ghana Limited</span> </a>focused on building simple, efficient and robust payment systems.</p>
-              <div class="d-grid gap-2 d-sm-flex justify-content-sm-center" style="margin-top: 50px ">
-                <a href="https://thetrojanblog.medium.com/" target="_blank" ><p class= "px-4" style="font-weight: bold; color:grey" >Medium</p></a>
-                <a href="#" target="_blank"><p class= "px-4" style="font-weight: bold;  color:grey" >Projects</p></a>
-                <a href="https://github.com/Willowusu" target="_blank" ><p class= "px-4" style="font-weight: bold;  color:grey" >Github</p></a>
-                <a href="mailto:williamowusu1998@gmail.com" target="_blank" ><p class= "px-4" style="font-weight: bold;  color:grey" >Contact</p></a>
-              </div>
-            </div>
-          </div>
-    </div>
-    
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script>
-    $.ajax({
-        type: "GET",
-        url: "https://ipgeolocation.abstractapi.com/v1/?api_key=d57a77f7a39b4421a40dcf0e0b4a6054",
-        success: function(response){
-            var flag = response.flag.svg
-            $(".flag").html(`<span>Hi there, I guess you are from <img src=${flag} class="pl-3" style="width: 20px; height: 20px"></span>`)
-        },
-        error: function(err){
-            console.log(err)
-        } 
+        <!--=============== BOXICONS ===============-->
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 
-    })
-    </script>
-</body>
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <title>William Owusu</title>
+    </head>
+    <body>
+        <!--==================== HEADER ====================-->
+        <header class="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo">
+                    William Owusu
+                </a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="https://thetrojanblog.medium.com/" target="_blank" class="nav__link">Medium</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Projects</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="https://github.com/Willowusu" target="_blank" class="nav__link">Github</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="mailto:williamowusu1998@gmail.com" target="_blank" class="nav__link">Contact</a>
+                        </li>
+                    </ul>
+
+                    <div class="nav__close" id="nav-close">
+                        <i class='bx bx-x'></i>
+                    </div>
+                </div>
+
+                <!-- Toggle button -->
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-grid-alt'></i>
+                </div>
+            </nav>
+        </header>
+
+        <!--==================== MAIN ====================-->
+        <main class="main">
+            <!--==================== HOME ====================-->
+            <section class="home">
+                <div class="home__container container">
+                    <div class="home__data">
+                        <span class="home__subtitle">My name is Willow</span>
+                        <h1 class="home__title">Hey There</h1>
+                        <p class="home__description">
+                            I am a software engineer who specializes <br>
+                             in building, and occassionally designing<br>
+                              exceptional digital experiences on the backend.<br>
+                               Currently, I'm an engineer at<a href="https://junipayments.com/" target="_blank"> <span style="font-weight: bold; color: red;"> Juni Ghana Limited,</span> </a><br>
+                               focused on building simple, efficient and robust payment systems. I am an avid reader and I write too!<br><br>
+                               I also probably watch too much Mr Robot for my own good!
+                        </p>
+                        <a href="#" class="home__button">
+                            Nodejs
+                        </a>
+                        <a href="#" class="home__button">
+                            AWS
+                        </a>
+                        <a href="#" class="home__button">
+                            MongoDB
+                        </a>
+                        <a href="#" class="home__button">
+                            Python
+                        </a>
+                    </div>
+
+                    <div class="home__img">
+                        <img src="assets/img/willow.png" alt="">
+                        <div class="home__shadow"></div>
+                    </div>
+                </div>
+
+                <footer class="home__footer">
+                    <span>(233) 509-803-979</span>
+                    <span>|</span>
+                    <span>@wi77ow</span>
+                </footer>
+            </section>
+        </main>
+
+        <!--=============== SCROLLREVEAL ===============-->
+        <script src="assets/js/scrollreveal.min.js"></script>
+
+        <!--=============== MAIN JS ===============-->
+        <script src="assets/js/main.js"></script>
+    </body>
 </html>
