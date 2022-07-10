@@ -7,7 +7,7 @@
 
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
-  --first-color: hsl(152, 70%, 77%);
+  --first-color: #f1f1f1;
   --text-color: hsl(38, 8%, 8%);
 
   /*========== Font and typography ==========*/
@@ -62,7 +62,8 @@ img {
 }
 
 .main {
-  overflow: hidden; /* For the animations ScrollReveal */
+  background-color: #f1f1f1;
+  /* overflow: hidden; For the animations ScrollReveal */
 }
 
 /*=============== HEADER & NAV ===============*/
@@ -198,6 +199,7 @@ img {
   column-gap: .5rem;
   font-size: var(--smaller-font-size);
   align-self: flex-end;
+  background-color: #f1f1f1;
 }
 
 /* Animate ghost */
